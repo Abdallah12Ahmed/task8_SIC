@@ -4,16 +4,37 @@ import pandas as pd
 import random
 import time
 
-#555
+
+"""TRIG = 23
+ECHO = 24
+DHT_SENSOR = Adafruit_DHT.DHT11
+DHT_PIN = 4"""
+
+
+
 num_data_points = 100
 log_file = 'data.csv'
 
 
 def get_ultrasonic_data():
+    """GPIO.output(TRIG, True)
+    GPIO.output(TRIG, False)
+
+    start_time = time.time()
+    while GPIO.input(ECHO) == 0:
+        start_time = time.time()
+    while GPIO.input(ECHO) == 1:
+        end_time = time.time()
+
+    duration = end_time - start_time
+    distance = (duration * 343) / 2
+    return distance"""
     return random.uniform(0, 10)
 
 
 def get_temperature_data():
+    """temperature = Adafruit_DHT.read(DHT_SENSOR, DHT_PIN)
+    return temperature"""
     return random.uniform(15, 30)
 
 
@@ -61,3 +82,9 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
+
+
+
+
+
+
